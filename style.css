@@ -1,0 +1,13 @@
+.container {
+    display: flex;
+    flex-wrap: wrap;
+    width: 800px;
+}
+
+.textareaBlock  {
+    width: 800px;
+}
+
+textarea {
+    width: 600px;
+}
