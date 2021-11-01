@@ -1,31 +1,31 @@
 let toUpperCase = document.getElementById("upper-case")
 toUpperCase.addEventListener('click', function (){
-    document.querySelector("textarea").textContent =
-    document.querySelector("textarea").textContent.toUpperCase()
+    document.querySelector("textarea").value =
+    document.querySelector("textarea").value.toUpperCase()
 })
 
 let toLowerCase = document.getElementById("lower-case")
 toLowerCase.addEventListener('click', function (){
-    document.querySelector("textarea").textContent =
-        document.querySelector("textarea").textContent.toLowerCase()
+    document.querySelector("textarea").value =
+        document.querySelector("textarea").value.toLowerCase()
 })
 
 let toProperCase = document.getElementById("proper-case")
 toProperCase.addEventListener("click", function () {
-   document.querySelector("textarea").textContent =
-       document.querySelector("textarea").textContent.toLowerCase()
-    const properCaseWords = document.querySelector("textarea").textContent.split(" ")
+   document.querySelector("textarea").value =
+       document.querySelector("textarea").value.toLowerCase()
+    const properCaseWords = document.querySelector("textarea").value.split(" ")
     const allFirstToUpperCase = properCaseWords.map(properCaseWords => properCaseWords[0].toUpperCase() + properCaseWords.substring(1)).join(" ")
-    document.querySelector("textarea").textContent = allFirstToUpperCase
+    document.querySelector("textarea").value = allFirstToUpperCase
 })
 
 let toSentenceCase = document.getElementById("sentence-case")
 toSentenceCase.addEventListener("click", function () {
-    document.querySelector("textarea").textContent =
-        document.querySelector("textarea").textContent.toLowerCase()
-    const sentenceCaseWords = document.querySelector("textarea").textContent.split(". ")
+    document.querySelector("textarea").value =
+        document.querySelector("textarea").value.toLowerCase()
+    const sentenceCaseWords = document.querySelector("textarea").value.split(". ")
     const firstToUpperCase = sentenceCaseWords.map(sentenceCaseWords => sentenceCaseWords[0].toUpperCase() + sentenceCaseWords.substring(1)).join(". ")
-    document.querySelector("textarea").textContent = firstToUpperCase
+    document.querySelector("textarea").value = firstToUpperCase
 })
 
 function download(filename, text) {
